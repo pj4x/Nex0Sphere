@@ -1,20 +1,3 @@
-# Write Your Own 64-bit Operating System Kernel From Scratch
-
-This respository holds all the source code for [this YouTube tutorial series](https://www.youtube.com/playlist?list=PLZQftyCk7_SeZRitx5MjBKzTtvk0pHMtp).
-
-You can find the revision for a specific episode on [this page](https://github.com/davidcallanan/yt-os-series/tags).
-
-You can find pre-built ISO files for this kernel at [this repository](https://github.com/davidcallanan/os-series-isos).
-
-Considering supporting this work via [my Patreon page](http://patreon.com/codepulse).
-
-## Prerequisites
-
- - A text editor such as [VS Code](https://code.visualstudio.com/).
- - [Docker](https://www.docker.com/) for creating our build-environment.
- - [Qemu](https://www.qemu.org/) for emulating our operating system.
-   - Remember to add Qemu to the path so that you can access it from your command-line. ([Windows instructions here](https://dev.to/whaleshark271/using-qemu-on-windows-10-home-edition-4062))
-
 ## Setup
 
 Build an image for our build-environment:
