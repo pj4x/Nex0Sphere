@@ -28,6 +28,8 @@ void print_clear() {
     for (size_t i = 0; i < NUM_ROWS; i++) {
         clear_row(i);
     }
+    col = 0;
+    row = 0;
 }
 
 void print_newline() {
