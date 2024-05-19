@@ -16,6 +16,14 @@ void kernel_main() {
 
     while(1){
         uint8_t sc = ps2_read_data();
-
+        uint16_t key = sct1[sc];
+        if(key > 127){
+            key = key >> 2;
+        }
+        else if(key != 0){
+            char ascii = (char)(key & 0xFF);
+            print_clear();
+            print_char(ascii);
+        }
     }
 }
