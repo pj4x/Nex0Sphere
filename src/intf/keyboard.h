@@ -44,6 +44,7 @@ static inline void outb(uint16_t port, uint8_t data) {
 }
 
 //array containing ascii values(if unprintable -> starting at 0x0100 increasing in order of table) indexable by scancodes from table 1
+
 uint16_t sct1[] = {
     0, 0x0100, 49, 50, // unprintable = escape
     51, 52, 53, 54,
@@ -52,20 +53,20 @@ uint16_t sct1[] = {
     113, 119, 101, 114,
     116, 121, 117, 105,
     111, 112, 91, 93,
-    0x0400, 0x0500, 97, 115, // unprintable = enter, control
+    0x0300, 0x0400, 97, 115, // unprintable = enter, control
     100, 102, 103, 104,
     106, 107, 108, 59,
-    39, 96, 0x0600, 92, // unprintable = shift
+    39, 96, 0x0500, 92, // unprintable = shift
     122, 120, 99, 118,
     98, 110, 109, 44,
-    46, 47, 0x0600, 42, // unprintable = shift
-    0x0700, 32, 0x0800, 0x0900, // unprintable = alt, CapsLock, f1
-    0x0A00, 0x0B00, 0x0C00, 0x0D00, // unprintable = f2, f3, f4, f5
-    0x0E00, 0x0F00, 0x1000, 0x1100, // unprintable = f6, f7, f8, f9
-    0x1200, 0x1500, 0x1600, 55, // unprintable = f10, NumLock, ScrollLock  (rule broken here to make Funvtion keys more logical)
+    46, 47, 0x0500, 42, // unprintable = shift
+    0x0600, 32, 0x0700, 0x0800, // unprintable = alt, CapsLock, f1
+    0x0900, 0x0A00, 0x0B00, 0x0C00, // unprintable = f2, f3, f4, f5
+    0x0D00, 0x0E00, 0x0F00, 0x1000, // unprintable = f6, f7, f8, f9
+    0x1100, 0x1400, 0x1500, 55, // unprintable = f10, NumLock, ScrollLock  (rule broken here to make Function keys more logical)
     56, 57, 45, 52,
     53, 54, 43, 49,
     50, 51, 48, 46,
-    0, 0, 0, 0x1300,
-    0x1400
+    0, 0, 0, 0x1200, // unprintable = f11
+    0x1300           // unprintable = f12
 };
